@@ -357,3 +357,49 @@ p  { color: var(--color-gray); max-width: 60ch; }
   .about { grid-template-columns: 1fr; }
   .about__image { aspect-ratio: 4 / 3; }
 }
+
+/* ── Page header (shared) ───────────────────────────────── */
+.page-header {
+  text-align: center;
+  padding: var(--spacing-lg) var(--spacing-md) var(--spacing-md);
+}
+.page-header h1 { margin-bottom: var(--spacing-sm); }
+.page-header p  { margin: 0 auto; }
+.page-header .divider { margin-left: auto; margin-right: auto; }
+
+/* ── How to Order ───────────────────────────────────────── */
+.steps {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: var(--spacing-lg) var(--spacing-md) var(--spacing-xl);
+}
+.step {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+.step__number {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: #fff;
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.step__content h3 { margin-bottom: 0.25rem; }
+.step__content p  { max-width: none; }
+
+.order-note {
+  background: var(--color-driftwood);
+  border-left: 3px solid var(--color-accent);
+  padding: var(--spacing-md);
+  max-width: 680px;
+  margin: 0 auto var(--spacing-xl);
+  border-radius: 0 2px 2px 0;
+}
+.order-note p { max-width: none; color: var(--color-text); }
