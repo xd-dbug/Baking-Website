@@ -179,3 +179,101 @@ p  { color: var(--color-gray); max-width: 60ch; }
   color: var(--color-silver);
   letter-spacing: 0.08em;
 }
+
+/* ── Home: Hero ─────────────────────────────────────────── */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-lg);
+  align-items: center;
+  padding: var(--spacing-xl) 0;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding-left: var(--spacing-md);
+  padding-right: var(--spacing-md);
+}
+.hero__eyebrow {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-silver);
+  margin-bottom: var(--spacing-sm);
+}
+.hero__title {
+  margin-bottom: var(--spacing-sm);
+}
+.hero__tagline {
+  color: var(--color-gray);
+  margin-bottom: var(--spacing-md);
+  max-width: 38ch;
+}
+.hero__image {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  background: var(--color-silver);
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-bg);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* ── Home: Featured strip ───────────────────────────────── */
+.featured {
+  background: var(--color-driftwood);
+  padding: var(--spacing-lg) 0;
+}
+.featured__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+.featured__label {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-gray);
+  margin-bottom: var(--spacing-md);
+  text-align: center;
+}
+.featured__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-sm);
+}
+.featured__item {
+  aspect-ratio: 1;
+  background: var(--color-silver);
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-bg);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ── Home: Intro blurb ──────────────────────────────────── */
+.intro {
+  text-align: center;
+  padding: var(--spacing-xl) var(--spacing-md);
+  max-width: 600px;
+  margin: 0 auto;
+}
+.intro h2 { margin-bottom: var(--spacing-sm); }
+.intro p  { margin: 0 auto var(--spacing-md); }
+
+/* ── Home responsive ────────────────────────────────────── */
+@media (max-width: 899px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .hero__image { aspect-ratio: 16 / 9; order: -1; }
+}
+@media (max-width: 599px) {
+  .featured__grid { grid-template-columns: repeat(2, 1fr); }
+}
