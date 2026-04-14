@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Sealed in Sugar</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">Sealed in Sugar</a>
+      <button class="nav__burger" id="burger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="how-to-order.html">How to Order</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+    <header class="page-header">
+      <h1>Get in Touch</h1>
+      <div class="divider"></div>
+      <p>Ready to start your order? Reach out however works best for you.</p>
+    </header>
+
+    <div class="contact-cards">
+      <div class="contact-card">
+        <div class="contact-card__icon">✉️</div>
+        <h3>Email</h3>
+        <p>Best for detailed order requests and quotes.</p>
+        <a href="mailto:your@email.com">your@email.com</a>
+      </div>
+      <div class="contact-card">
+        <div class="contact-card__icon">📷</div>
+        <h3>Instagram</h3>
+        <p>DM me or follow along for the latest work.</p>
+        <a href="https://instagram.com/YOUR_HANDLE" target="_blank" rel="noopener">@YOUR_HANDLE</a>
+      </div>
+      <div class="contact-card">
+        <div class="contact-card__icon">💬</div>
+        <h3>Discord</h3>
+        <p>Come chat — perfect for quick questions.</p>
+        <a href="https://discord.gg/YOUR_INVITE" target="_blank" rel="noopener">Join my server</a>
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <h2>Send a message</h2>
+      <form action="mailto:your@email.com" method="POST" enctype="text/plain">
+        <div class="form-group">
+          <label for="name">Your name</label>
+          <input type="text" id="name" name="name" required placeholder="Jane Smith" />
+        </div>
+        <div class="form-group">
+          <label for="email">Your email</label>
+          <input type="email" id="email" name="email" required placeholder="jane@example.com" />
+        </div>
+        <div class="form-group">
+          <label for="message">Tell me about your order</label>
+          <textarea id="message" name="message" required placeholder="e.g. Birthday cake for 20 people, chocolate sponge, mid-June..."></textarea>
+        </div>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__links">
+      <a href="mailto:your@email.com">Email</a>
+      <a href="https://instagram.com/YOUR_HANDLE" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://discord.gg/YOUR_INVITE" target="_blank" rel="noopener">Discord</a>
+    </div>
+    <p class="footer__copy">© Sealed in Sugar</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
