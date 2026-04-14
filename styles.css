@@ -176,6 +176,6 @@ p  { color: var(--color-gray); max-width: 60ch; }
 .footer__links a:hover { color: var(--color-accent); }
 .footer__copy {
   font-size: 0.7rem;
-  color: var(--color-gray);
+  color: var(--color-silver);
   letter-spacing: 0.08em;
 }
