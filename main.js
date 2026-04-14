@@ -25,3 +25,19 @@ document.querySelectorAll('.nav__links a').forEach(link => {
     link.classList.add('active');
   }
 });
+
+// ── FAQ accordion ────────────────────────────────────────
+document.querySelectorAll('.faq__question').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq__item');
+    const isOpen = item.classList.contains('open');
+
+    // Close all open items
+    document.querySelectorAll('.faq__item.open').forEach(openItem => {
+      openItem.classList.remove('open');
+    });
+
+    // Open clicked item if it was closed
+    if (!isOpen) item.classList.add('open');
+  });
+});
