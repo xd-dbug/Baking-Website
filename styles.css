@@ -151,3 +151,31 @@ p  { color: var(--color-gray); max-width: 60ch; }
   }
   .nav__links.open { display: flex; }
 }
+
+/* ── Footer ─────────────────────────────────────────────── */
+.footer {
+  margin-top: auto;
+  background: var(--color-text);
+  color: var(--color-silver);
+  padding: var(--spacing-lg) 0;
+  text-align: center;
+}
+.footer__links {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
+}
+.footer__links a {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-silver);
+  transition: color 0.2s;
+}
+.footer__links a:hover { color: var(--color-accent); }
+.footer__copy {
+  font-size: 0.7rem;
+  color: var(--color-gray);
+  letter-spacing: 0.08em;
+}
