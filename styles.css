@@ -526,6 +526,32 @@ p  { color: var(--color-gray); max-width: 60ch; }
 }
 .form-group textarea { resize: vertical; min-height: 140px; }
 
+/* Formspree feedback */
+.form-feedback {
+  display: none;
+  padding: var(--spacing-md);
+  border-radius: 2px;
+  margin-bottom: var(--spacing-md);
+  font-size: 0.9rem;
+}
+.form-feedback p { max-width: none; color: inherit; }
+.form-feedback--success { background: #edf7ed; color: #2e6b30; border: 1px solid #b6ddb8; }
+.form-feedback--error   { background: #fdf0f0; color: #8b2a2a; border: 1px solid #e8b4b4; }
+[data-fs-success]:not(:empty),
+[data-fs-error]:not(:empty) { display: block; }
+.form-field-error {
+  display: block;
+  font-size: 0.75rem;
+  color: #8b2a2a;
+  margin-top: 0.25rem;
+}
+.form-group input[aria-invalid="true"],
+.form-group textarea[aria-invalid="true"] {
+  border-color: #c0392b;
+  box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.15);
+}
+.btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
 @media (max-width: 699px) {
   .contact-cards { grid-template-columns: 1fr; }
 }
