@@ -35,9 +35,13 @@ document.querySelectorAll('.faq__question').forEach(btn => {
     // Close all open items
     document.querySelectorAll('.faq__item.open').forEach(openItem => {
       openItem.classList.remove('open');
+      openItem.querySelector('.faq__question').setAttribute('aria-expanded', 'false');
     });
 
     // Open clicked item if it was closed
-    if (!isOpen) item.classList.add('open');
+    if (!isOpen) {
+      item.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
   });
 });
