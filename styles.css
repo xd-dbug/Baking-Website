@@ -210,13 +210,13 @@ p  { color: var(--color-gray); max-width: 60ch; }
   aspect-ratio: 4 / 5;
   background: var(--color-silver);
   border-radius: 2px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-bg);
-  font-size: 0.8rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  overflow: hidden;
+}
+.hero__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 /* ── Home: Featured strip ───────────────────────────────── */
@@ -246,13 +246,13 @@ p  { color: var(--color-gray); max-width: 60ch; }
   aspect-ratio: 1;
   background: var(--color-silver);
   border-radius: 2px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-bg);
-  font-size: 0.75rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  overflow: hidden;
+}
+.featured__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 /* ── Home: Intro blurb ──────────────────────────────────── */
@@ -342,13 +342,13 @@ p  { color: var(--color-gray); max-width: 60ch; }
   aspect-ratio: 3 / 4;
   background: var(--color-silver);
   border-radius: 2px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-bg);
-  font-size: 0.8rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  overflow: hidden;
+}
+.about__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 .about__text h1 { margin-bottom: var(--spacing-sm); }
 .about__text p  { margin-bottom: var(--spacing-md); }
@@ -356,6 +356,37 @@ p  { color: var(--color-gray); max-width: 60ch; }
 @media (max-width: 699px) {
   .about { grid-template-columns: 1fr; }
   .about__image { aspect-ratio: 4 / 3; }
+}
+
+/* ── Seal gallery (about page) ──────────────────────────── */
+.seal-section {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-md) var(--spacing-xl);
+  text-align: center;
+}
+.seal-section h2 { margin-bottom: var(--spacing-sm); }
+.seal-section .divider { margin-left: auto; margin-right: auto; }
+.seal-section p { margin: 0 auto var(--spacing-lg); }
+.seal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-sm);
+}
+.seal-grid__item {
+  aspect-ratio: 1;
+  background: var(--color-silver);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.seal-grid__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+@media (max-width: 599px) {
+  .seal-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 /* ── Page header (shared) ───────────────────────────────── */
