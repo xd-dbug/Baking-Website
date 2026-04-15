@@ -67,7 +67,7 @@ p  { color: var(--color-gray); max-width: 60ch; }
   display: inline-block;
   padding: 0.75rem 1.75rem;
   background: var(--color-accent);
-  color: #fff;
+  color: var(--color-text);
   font-family: var(--font-sans);
   font-size: 0.8rem;
   letter-spacing: 0.12em;
@@ -517,12 +517,25 @@ p  { color: var(--color-gray); max-width: 60ch; }
   font-size: 1rem;
   color: var(--color-text);
   outline: none;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 .form-group input:focus,
-.form-group textarea:focus { border-color: var(--color-accent); }
+.form-group textarea:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(232, 168, 124, 0.25);
+}
 .form-group textarea { resize: vertical; min-height: 140px; }
 
 @media (max-width: 699px) {
   .contact-cards { grid-template-columns: 1fr; }
+}
+
+/* ── Focus styles ───────────────────────────────────────── */
+.btn:focus-visible,
+.faq__question:focus-visible,
+.nav__links a:focus-visible,
+.nav__logo:focus-visible,
+.contact-card a:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
 }

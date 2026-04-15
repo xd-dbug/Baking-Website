@@ -23,6 +23,7 @@ document.querySelectorAll('.nav__links a').forEach(link => {
   if (linkPath === currentPath ||
       (currentPath.endsWith('/') && linkPath.endsWith('/index.html'))) {
     link.classList.add('active');
+    link.setAttribute('aria-current', 'page');
   }
 });
 
